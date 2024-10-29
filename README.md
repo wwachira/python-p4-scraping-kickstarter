@@ -5,6 +5,16 @@
 - Use BeautifulSoup to scrape an HTML document.
 - Use scraped data to build a nested data structure.
 
+Example Sequence in IPDB
+Here’s how the sequence might look in the IPDB terminal:
+ipdb> print(projects)  # To view the projects list
+ipdb> import json      # If you want to print it in JSON format
+ipdb> print(json.dumps(projects, indent=4))  # To view in JSON format
+ipdb> c  # To continue execution and save the file
+
+kickstarter.select("li.project.grid_4")  # View the list of project elements
+project = kickstarter.select("li.project.grid_4")[0]  # Get the first project item
+project.select("h2.bbcard_name strong a")[0].text  # Check the title of the first project
 ***
 
 ## Key Vocab
